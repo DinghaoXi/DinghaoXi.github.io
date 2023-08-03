@@ -16,13 +16,10 @@ I am a Ph.D. student in **Computer Application Technology** at Renmin University
 
 ## Academic Background
 
-- **Renmin University of China**
-  - **Ph.D. in Computer Application Technology**, Sep 2019 - Expected June 2024
-  - **BSc in Mathematics and Applied Mathematics**, Sep 2015 - June 2019
-  - **Bachelor in Finance**, Sep 2015 - June 2019
-
-- **National University of Singapore**
-  - **Visiting Ph.D. in Information Systems**, Sep 2022 - June 2023
+- **Ph.D. in Computer Application Technology**, Renmin University of China, Sep 2019 - Expected June 2024
+- **Visiting Ph.D. in Information Systems**, National University of Singapore, Sep 2022 - June 2023
+- **BSc in Mathematics and Applied Mathematics**, Renmin University of China, Sep 2015 - June 2019
+- **Bachelor in Finance**, Renmin University of China, Sep 2015 - June 2019
 
 <br>
 
@@ -49,4 +46,5 @@ My current research focuses on practical problems that artificial intelligence f
 - **Mar 2019 - July 2019**：Intern at Beijing Megvii Technology Co., Ltd.
 
 <br>
+
 </div>
