@@ -49,5 +49,4 @@ My current research focuses on practical problems that artificial intelligence f
 - **Mar 2019 - July 2019**：Intern at Beijing Megvii Technology Co., Ltd.
 
 <br>
-
 </div>
