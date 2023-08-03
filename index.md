@@ -2,6 +2,8 @@
 layout: page
 ---
 
+<div style="text-align: justify">
+
 # About Me
 
 <img src="https://dinghaoxi.github.io/Singapore.jpg" class="floatpic" width="360" height="480">
@@ -21,7 +23,6 @@ I am a Ph.D. student in **Computer Application Technology** at Renmin University
 
 - **National University of Singapore**
   - **Visiting Ph.D. in Information Systems**, Sep 2022 - June 2023
-
 
 <br>
 
@@ -48,3 +49,5 @@ My current research focuses on practical problems that artificial intelligence f
 - **Mar 2019 - July 2019**：Intern at Beijing Megvii Technology Co., Ltd.
 
 <br>
+
+</div>
