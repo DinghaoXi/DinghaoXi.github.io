@@ -14,12 +14,14 @@ I am a Ph.D. student in **Computer Application Technology** at Renmin University
 
 ## Academic Background
 
-| Time Period | Institution | Degree |
-| ----------- | ----------- | ------ |
-| Sep 2019 - Expected June 2024 | Renmin University of China | Ph.D. in Computer Application Technology |
-| Sep 2022 - June 2023 | National University of Singapore | Visiting Ph.D. in Information Systems |
-| Sep 2015 - June 2019 | Renmin University of China | BSc in Mathematics and Applied Mathematics |
-| Sep 2015 - June 2019 | Renmin University of China | Bachelor in Finance |
+- **Renmin University of China**
+  - **2019.09 - Expected 2024.06:** Ph.D., Computer Tech.
+  - **2015.09 - 2019.06:** BSc, Math & Applied Math
+  - **2015.09 - 2019.06:** Bachelor, Finance
+
+- **National University of Singapore**
+  - **2022.09 - 2023.06:** Visiting Ph.D., Info Systems
+
 
 
 <br>
