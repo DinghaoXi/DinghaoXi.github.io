@@ -2,11 +2,13 @@
 layout: page
 ---
 
-# Dinghao Xi (奚鼎昊)
+# About Me
 
 <img src="https://dinghaoxi.github.io/Singapore.jpg" class="floatpic" style="max-width: 100%; height: auto;">
 
-I am a Ph.D. student in **Computer Application Technology** at Renmin University of China and a badminton enthusiast. I am extremely fortunate to be advised by [Prof. Wei Xu](http://info.ruc.edu.cn/jsky/szdw/adszycx/sssds/glkxygc/168a49630e2a454083c238631b42b752.htm) and [Prof. Dandan Qiao](https://www.comp.nus.edu.sg/disa/bio/qiaodd/). Here is [my Resume](https://dinghaoxi.github.io/file/DinghaoXi_ch.pdf).
+Here is **Dinghao Xi (奚鼎昊)**.
+
+I am a Ph.D. student in **Computer Application Technology** at Renmin University of China and a badminton enthusiast now. I am extremely fortunate to be advised by [Prof. Wei Xu](http://info.ruc.edu.cn/jsky/szdw/adszycx/sssds/glkxygc/168a49630e2a454083c238631b42b752.htm) and [Prof. Dandan Qiao](https://www.comp.nus.edu.sg/disa/bio/qiaodd/). Here is [my Resume](https://dinghaoxi.github.io/file/DinghaoXi_ch.pdf).
 
 <br>
 
