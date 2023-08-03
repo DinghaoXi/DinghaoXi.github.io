@@ -6,17 +6,17 @@ url: https://dinghaoxi.github.io
 
 # Owner/author information
 owner:
-  name: Hanlin Cai
+  name: Dinghao Xi
   avatar: hanlin.jpg
 #  bio:
-  email: hanlin.cai@ieee.org
+  email: xidinghao@ruc.edu.cn
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
   twitter: lancecai2002
   # facebook: caihanlin2002
   github: DinghaoXi
-  linkedin: hanlin-cai-07b53b23b
-  scholar: https://scholar.google.com/citations?user=8igSoWgAAAAJ
-  # instagram: lancecai2002
+  linkedin: dinghao-xi-433161141
+  scholar: https://scholar.google.com/citations?user=nqXcOIEAAAAJ
+  # instagram: 
   # lastfm:
   # tumblr:
   # For Google Authorship https://plus.google.com/authorship
@@ -83,5 +83,5 @@ include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
 
 
-# Latest update in 2023/05/01 by Hanlin Cai.
+# Latest update in 2023/08/03 by Dinghao Xi.
 # URL: https://caihanlin.com/
