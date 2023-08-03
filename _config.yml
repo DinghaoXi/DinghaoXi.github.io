@@ -7,11 +7,11 @@ url: https://dinghaoxi.github.io
 # Owner/author information
 owner:
   name: Dinghao Xi
-  avatar: hanlin.jpg
+  avatar: xdh.jpg
 #  bio:
   email: xidinghao@ruc.edu.cn
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter: lancecai2002
+  # twitter: lancecai2002
   # facebook: caihanlin2002
   github: DinghaoXi
   linkedin: dinghao-xi-433161141
@@ -84,4 +84,4 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 
 # Latest update in 2023/08/03 by Dinghao Xi.
-# URL: https://caihanlin.com/
+# URL: https://dinghaoxi.github.io/
