@@ -1,20 +1,9 @@
-# 正在更新，刚copy
+# Aloha, World! 🌺🌴
 
-My name is **Hanlin Cai (Lance, 蔡汉霖)**. Here is my personal website. Welcome to fork for free!
+I'm **Dinghao Xi** (奚鼎昊), a Ph.D. student at Renmin University of China 🎓, diving deep into the fascinating world of Computer Application Technology. But hey, life isn't just about zeros and ones, right? 
 
-Besides, [my Chinese Website](https://mieclance.club/) averages over 200+ unique visits monthly, [my Zhihu](https://www.zhihu.com/people/chlire) account has more than 1500+ followers and 15000+ likes. In addition, [my Bilibili](https://space.bilibili.com/594030035) (Chinese YouTube) possesses around 2000 fans.
+When I'm not buried in algorithms and data, you'll find me on the badminton court, smashing birdies with gusto! 🏸 I'm a firm believer in the power of lifelong learning and the magic that happens when technology meets passion.
 
-## Update and News
+As a badminton enthusiast, I'm always looking for ways to blend my love for the sport with my technical skills. Who knows? Maybe the next big thing in sports tech is just a few lines of code away!
 
-- **[News] I am actively searching for a PhD program, please contact me!**
-- **May 2023:** **[Jekyll website building tutorial](https://www.bilibili.com/video/BV1ja4y1G7tX/?share_source=copy_web&vd_source=c8936a3bacfd65375f9e88b3bb9a12ba)** have been uploaded to Bilibili (in Chinese)
-- **Feb. 2023:** If you have any problem, please feel free to contact me - [Online Talk 15mins](https://calendly.com/lancecai/meet-with-lance)
-- **Dec. 2022:** My personal website have been implemented and deployed in [caihanlin.com](https://caihanlin.com)
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=GuangLun2000/GuangLun2000.github.io&type=Date)](https://star-history.com/#GuangLun2000/GuangLun2000.github.io&Date)
-
-## Statement
-
-© 2023 Hanlin Cai. Published with [GitHub Pages](https://pages.github.com/), powered by [Jekyll](https://jekyllrb.com/), based on the [Minimal Mistakes](https://mademistakes.com/) theme and [Jason Ansel's site](https://github.com/jansel/jansel.github.io). Source code for this website can be found [here](https://github.com/GuangLun2000/GuangLun2000.github.io).
+Feel free to explore my [homepage](https://dinghaoxi.github.io/) and let's connect! Remember, in the world of code and badminton, always aim high and keep smashing! 🚀
