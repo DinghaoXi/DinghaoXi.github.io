@@ -38,14 +38,14 @@ links:
     url: /file/Resume-HanlinCAI.pdf
   - title: Publications
     url: /publications/
-  - title: Projects
-    url: /projects/
-  - title: Awards
-    url: /awards/
-  - title: Hobbies
-    url: /hobbies/
-  - title: Blogs
-    url: /blogs/
+  # - title: Projects
+  #   url: /projects/
+  # - title: Awards
+  #   url: /awards/
+  # - title: Hobbies
+  #   url: /hobbies/
+  # - title: Blogs
+  #   url: /blogs/
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone: China/Beijing
