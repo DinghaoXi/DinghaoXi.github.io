@@ -6,11 +6,7 @@ title: Publications
 
 # Publications
 
-Lastest Update: 23rd July 2023&nbsp;  [中文 (Chinese Version)](https://caihanlin.com/publications-zh/)
-
-## Undergrad Thesis
-
-- [Industrial Inspection System based on Intelligent IoT and Bionic Quadruped Robot](https://caihanlin.com/mypaper/thesis/IP-thesis.pdf)<br>**Hanlin Cai** (Advisor: Zhezhuang Xu)<br>Industrial Placement Thesis in Huading Tech and IACTIP Lab<br>
+Lastest Update: 13rd Aug 2023&nbsp; 
 
 ## Conference Paper
 
@@ -18,11 +14,10 @@ Lastest Update: 23rd July 2023&nbsp;  [中文 (Chinese Version)](https://caihanl
 
 - [An IoT Garbage Monitoring System for Effective Garbage Management](https://caihanlin.com/mypaper/202208cenim.pdf)<br>**Hanlin Cai**, Jiaqi Hu, Zheng Li, Wei Hong Lim, Mastaneh Mokayef, Chin Hong Wong<br>4th International Conference on Computer Engineering, Network and Intelligent Multimedia<br>Surabaya, Indonesia. November, 2022.<br>
 
+## Journal Paper
+
+
 ---
-
-## Competition Paper
-
-- [Reshape the Crowning Glory of Maasai Mara](https://caihanlin.com/mypaper/modeling/202302COMAP.pdf)<br>**Hanlin Cai**, Yufei Wu, Wenxuan Luo, Zhezhuang Xu<br>Mathematical Contest In Modeling (COMAP 2023)<br>**Finalist Award** (Top 1% of all 20858 paper).<br>
 
 ## Working Manuscript
 
