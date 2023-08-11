@@ -9,16 +9,20 @@ title: Publications
 Lastest Update: 13rd Aug 2023&nbsp; 
 
 ## Conference Paper
-
-- [Deep Residual Neural Network for Efficient Traffic Sign Detection](https://caihanlin.com/mypaper/202302ICAROB.pdf)<br>**Hanlin Cai**, Zheng Li, Jiaqi Hu, Wei Hong Lim, Sew Sun Tiang, Mastaneh Mokayef, Chin Hong Wong<br>28th International Conference on Artificial Life and Robotics<br>Beppu, Japan. February, 2023. [Slides](https://caihanlin.com/mypaper/slides/2023-ICAROB-Pre.pdf).
-
-- [An IoT Garbage Monitoring System for Effective Garbage Management](https://caihanlin.com/mypaper/202208cenim.pdf)<br>**Hanlin Cai**, Jiaqi Hu, Zheng Li, Wei Hong Lim, Mastaneh Mokayef, Chin Hong Wong<br>4th International Conference on Computer Engineering, Network and Intelligent Multimedia<br>Surabaya, Indonesia. November, 2022.<br>
+- Unveiling the Secrets of Collaboration on Video-Sharing Platforms.<br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br>Conditionally accepted to 2023 International Conference on Information Systems(ICIS).<br>
 
 ## Journal Paper
+- Sending or not? A multimodal framework for Danmaku comment prediction<br>**Dinghao Xi**, Wei Xu, Runyu Chen, Yuhang Zhou, Zhan Yang<br>Information Processing & Management, Volume 58, Issue 6, 2021.
+  
+- Enhanced segmentation of gastrointestinal polyps from capsule endoscopy images with artifacts using ensemble learning<br> Junxiao Zhou, Zhan Yang, **Dinghao Xi**, Shoujun Dai, Zhiqiang Feng, Junyan Li, Wei Xu, Hong Wang<br>World Journal of Gastroenterology, Volume 28, Issue 41, 2022.
+  
+- A multimodal time-series method for gifting prediction in live streaming platforms<br>**Dinghao Xi**, Liumin Tang, Runyu Chen, Wei Xu<br>Information Processing & Management, Volume 60, Issue 3, 2023.
+
+- The impact of streamer emotions on viewer gifting behavior: Evidence from entertainment live streaming<br>**Dinghao Xi**, Wei Xu, Liumin Tang, Bingning Han<br>Internet Research (Accepted, awaiting online publication)
 
 
 ---
 
 ## Working Manuscript
 
-- Learning Based Detection System for Spoofing Attack in BLE Networks<br>**Hanlin Cai** (Advisor: [Pietro Liò](https://www.cl.cam.ac.uk/~pl219/) and Zhezhuang Xu)<br>[The latest manuscript](https://caihanlin.com/mypaper/202210camb.pdf) (during 2022 Summer Intern at Cambridge University)<br>**Working hard for the upcoming AAAI 2024!**
+- Secret.
