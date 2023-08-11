@@ -1,4 +1,4 @@
-# Aloha, World! 🌺🌴 (My homepage is under updating...forked yesterday)
+# Aloha, World! 🌺🌴 
 
 I'm **Dinghao Xi** (奚鼎昊), a Ph.D. student at Renmin University of China 🎓, diving deep into the fascinating world of Computer Application Technology. But hey, life isn't just about zeros and ones, right? 
 
