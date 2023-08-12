@@ -43,7 +43,7 @@ My current research focuses on practical problems that artificial intelligence f
 
 ## News and Updates
 
-- **Aug 1st 2023**：Our paper is conditionally accepted to ICIS 2023!
+- **Aug 13rd 2023**：Recently, our papers are conditionally accepted to ICIS 2023 and CIST 2023!
 - **July 2023 - Present**：Large Language Model Algorithm Intern at Beijing Zhongke Wenge Technology Co., Ltd.
 - **Jan 2021 - Jan 2022**：Participant in 2021 Pre-research Commissioned Team Fund Project of Renmin University of China.
 - **Jan 2020 - June 2021**：Principal in 2020 Scientific Research Fund Graduate Project of Renmin University of China.
