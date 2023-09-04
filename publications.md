@@ -6,7 +6,7 @@ title: Publications
 
 # Publications
 
-Lastest Update: 13rd Aug 2023&nbsp; 
+Lastest Update: 4th Sep 2023&nbsp; 
 
 ## Conference Paper
 - Unveiling the secrets of collaboration on video-sharing platforms.<br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br>Conditional accepted to ICIS 2023 and CIST 2023.<br>
