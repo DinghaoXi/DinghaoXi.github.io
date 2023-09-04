@@ -9,7 +9,7 @@ title: Publications
 Lastest Update: 13rd Aug 2023&nbsp; 
 
 ## Conference Paper
-- Unveiling the secrets of collaboration on video-sharing platforms.<br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br>2023 International Conference on Information Systems (ICIS)<br><br> Conference on Information Systems and Technology (CIST)<br>
+- Unveiling the secrets of collaboration on video-sharing platforms.<br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br>Conditional accepted to ICIS 2023 and CIST 2023.<br>
 
 ## Journal Paper
 - Sending or not? A multimodal framework for Danmaku comment prediction<br>**Dinghao Xi**, Wei Xu, Runyu Chen, Yuhang Zhou, Zhan Yang<br>Information Processing & Management, Volume 58, Issue 6, 2021.
