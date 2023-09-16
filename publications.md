@@ -27,6 +27,6 @@ Lastest Update: 4th Sep 2023&nbsp;
 
 - The effect of discrete emotion synchronicity on video-Based social media engagement: Evidence from moment-to-moment multimodal data <br>**Dinghao Xi**, Jilei Zhou, Liumin Tang, Wei Xu<br>International Journal of Electronic Commerce (Under 2nd review).
 
-- The power of emotion in live streaming: Unraveling the impact of streamers’ visual and vocal signals on chat engagement <br>Liumin Tang, Guoxin Wang, **Dinghao Xi**, Wei Xu <br> Internet Research (Under 1nd review)
+- The power of emotion in live streaming: Unraveling the impact of streamers’ visual and vocal signals on chat engagement <br>Liumin Tang, Guoxin Wang, **Dinghao Xi**, Wei Xu <br> Internet Research (Under 1st review).
 
-- Unveiling the secrets of collaboration on video-sharing platforms.<br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br>Preparing for Information System Research<br>
+- Unveiling the secrets of collaboration on video-sharing platforms.<br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br>Preparing for Information System Research.
