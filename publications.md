@@ -20,12 +20,12 @@ Lastest Update: 4th Sep 2023&nbsp;
 
 - The impact of streamer emotions on viewer gifting behavior: Evidence from entertainment live streaming<br>**Dinghao Xi**, Wei Xu, Liumin Tang, Bingning Han<br>Internet Research (Accepted, awaiting online publication).
 
+- The effect of discrete emotion synchronicity on video-Based social media engagement: Evidence from moment-to-moment multimodal data <br>**Dinghao Xi**, Jilei Zhou, Liumin Tang, Wei Xu<br>International Journal of Electronic Commerce (Accepted, awaiting online publication).
 
 ---
 
 ## Working Manuscript
 
-- The effect of discrete emotion synchronicity on video-Based social media engagement: Evidence from moment-to-moment multimodal data <br>**Dinghao Xi**, Jilei Zhou, Liumin Tang, Wei Xu<br>International Journal of Electronic Commerce (Under 2nd review).
 
 - The power of emotion in live streaming: Unraveling the impact of streamers’ visual and vocal signals on chat engagement <br>Liumin Tang, Guoxin Wang, **Dinghao Xi**, Wei Xu <br> Internet Research (Under 1st review).
 
