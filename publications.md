@@ -18,7 +18,7 @@ Lastest Update: 4th Sep 2023&nbsp;
   
 - A multimodal time-series method for gifting prediction in live streaming platforms<br>**Dinghao Xi**, Liumin Tang, Runyu Chen, Wei Xu<br>Information Processing & Management, Volume 60, Issue 3, 2023.
 
-- The impact of streamer emotions on viewer gifting behavior: Evidence from entertainment live streaming<br>**Dinghao Xi**, Wei Xu, Liumin Tang, Bingning Han<br>Internet Research (Accepted, awaiting online publication).
+- The impact of streamer emotions on viewer gifting behavior: Evidence from entertainment live streaming<br>**Dinghao Xi**, Wei Xu, Liumin Tang, Bingning Han<br>Internet Research (ahead-of-print:https://doi.org/10.1108/INTR-05-2022-0350).
 
 - The effect of discrete emotion synchronicity on video-Based social media engagement: Evidence from moment-to-moment multimodal data <br>**Dinghao Xi**, Jilei Zhou, Liumin Tang, Wei Xu<br>International Journal of Electronic Commerce (Accepted, awaiting online publication).
 
