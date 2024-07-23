@@ -53,3 +53,9 @@ My current research focuses on practical problems that artificial intelligence f
 - **Mar 2019 - July 2019**：Intern at Beijing Megvii Technology Co., Ltd.
 
 <br>
+
+## Professional Service
+- Reviewer for Journals:
+  - Internet Research
+  - Information Processing & Management
+  - ACM Transactions on Knowledge Discovery from Data (TKDD)
