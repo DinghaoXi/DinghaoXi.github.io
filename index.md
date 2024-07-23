@@ -44,10 +44,10 @@ My current research focuses on practical problems that artificial intelligence f
 ---
 
 ## News and Updates
-- **July 2024**: Join SUFE as AP. Keep fighting.
-- **Oct 19th 2023**：Recently, our paper are accepted to IJEC.
-- **Aug 13rd 2023**：Luckily, our papers are conditionally accepted to ICIS 2023 and CIST 2023.
-- **July 2023 - Present**：Large Language Model Algorithm Intern at Beijing Zhongke Wenge Technology Co., Ltd.
+- **July 2024**: Join SUFE as AP.
+- **Oct 2023**：Recently, our paper are accepted to IJEC.
+- **Aug 2023**：Luckily, our papers are accepted to ICIS 2023 and CIST 2023.
+- **July 2023 - Aug 2023**：Large Language Model Algorithm Intern at Beijing Zhongke Wenge Technology Co., Ltd.
 - **Jan 2021 - Jan 2022**：Participant in 2021 Pre-research Commissioned Team Fund Project of Renmin University of China.
 - **Jan 2020 - June 2021**：Principal in 2020 Scientific Research Fund Graduate Project of Renmin University of China.
 - **Mar 2019 - July 2019**：Intern at Beijing Megvii Technology Co., Ltd.
