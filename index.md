@@ -8,13 +8,13 @@ layout: page
 
 Here is **Dinghao Xi (奚鼎昊)**.
 
-I am an Assistant Professor at Shanghai University of Finance and Economics, holding a Ph.D. in **Computer Application Technology** at Renmin University of China. I am extremely fortunate to be advised by [Prof. Wei Xu](http://info.ruc.edu.cn/jsky/szdw/adszycx/sssds/glkxygc/168a49630e2a454083c238631b42b752.htm) and [Prof. Dandan Qiao](https://www.comp.nus.edu.sg/disa/bio/qiaodd/). Here is [my Chinese resume](https://dinghaoxi.github.io/file/DinghaoXi_ch.pdf).
+I am an Assistant Professor at Shanghai University of Finance and Economics, holding a Ph.D. in Computer Application Technology at Renmin University of China. I am extremely fortunate to be advised by [Prof. Wei Xu](http://info.ruc.edu.cn/jsky/szdw/adszycx/sssds/glkxygc/168a49630e2a454083c238631b42b752.htm) and [Prof. Dandan Qiao](https://www.comp.nus.edu.sg/disa/bio/qiaodd/). Here is [my Chinese resume](https://dinghaoxi.github.io/file/DinghaoXi_ch.pdf).
 
 <br>
 
 ## Academic Background
 - **Shanghai University of Finance and Economics**
-  - **2024.07 - Now:** Department of Digital Economics, Assistant Professor
+  - **2024.07 - Now:** Assistant Professor
 
 - **Renmin University of China**
   - **2019.09 - 2024.06:** Ph.D., Computer Tech.
