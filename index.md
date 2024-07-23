@@ -8,14 +8,16 @@ layout: page
 
 Here is **Dinghao Xi (奚鼎昊)**.
 
-I am now a Ph.D. student in **Computer Application Technology** at Renmin University of China. I am extremely fortunate to be advised by [Prof. Wei Xu](http://info.ruc.edu.cn/jsky/szdw/adszycx/sssds/glkxygc/168a49630e2a454083c238631b42b752.htm) and [Prof. Dandan Qiao](https://www.comp.nus.edu.sg/disa/bio/qiaodd/). Here is [my Chinese resume](https://dinghaoxi.github.io/file/DinghaoXi_ch.pdf).
+I am an Assistant Professor at Shanghai University of Finance and Economics, holding a Ph.D. in **Computer Application Technology** at Renmin University of China. I am extremely fortunate to be advised by [Prof. Wei Xu](http://info.ruc.edu.cn/jsky/szdw/adszycx/sssds/glkxygc/168a49630e2a454083c238631b42b752.htm) and [Prof. Dandan Qiao](https://www.comp.nus.edu.sg/disa/bio/qiaodd/). Here is [my Chinese resume](https://dinghaoxi.github.io/file/DinghaoXi_ch.pdf).
 
 <br>
 
 ## Academic Background
+- **Shanghai University of Finance and Economics**
+  - **2024.07 - Now:** Department of Digital Economics, Assistant Professor
 
 - **Renmin University of China**
-  - **2019.09 - Expected 2024.06:** Ph.D., Computer Tech.
+  - **2019.09 - 2024.06:** Ph.D., Computer Tech.
   - **2015.09 - 2019.06:** BSc, Math & Applied Math
   - **2015.09 - 2019.06:** Bachelor, Finance
 
@@ -42,8 +44,9 @@ My current research focuses on practical problems that artificial intelligence f
 ---
 
 ## News and Updates
-- **Oct 19th 2023**：Recently, our paper are accepted to IJEC!
-- **Aug 13rd 2023**：Luckily, our papers are conditionally accepted to ICIS 2023 and CIST 2023!
+- ** July 2024 **: Join SUFE as AP.Fighting.
+- **Oct 19th 2023**：Recently, our paper are accepted to IJEC.
+- **Aug 13rd 2023**：Luckily, our papers are conditionally accepted to ICIS 2023 and CIST 2023.
 - **July 2023 - Present**：Large Language Model Algorithm Intern at Beijing Zhongke Wenge Technology Co., Ltd.
 - **Jan 2021 - Jan 2022**：Participant in 2021 Pre-research Commissioned Team Fund Project of Renmin University of China.
 - **Jan 2020 - June 2021**：Principal in 2020 Scientific Research Fund Graduate Project of Renmin University of China.
