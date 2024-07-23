@@ -11,7 +11,7 @@ Lastest Update: 23th Jun 2024&nbsp;
 ## Journal Paper
 - [Sending or not? A multimodal framework for Danmaku comment prediction](https://www.sciencedirect.com/science/article/pii/S0306457321001722) <br>**Dinghao Xi**, Wei Xu, Runyu Chen, Yuhang Zhou, Zhan Yang<br>Information Processing & Management, Volume 58, Issue 6, 2021.
   
-- [Enhanced segmentation of gastrointestinal polyps from capsule endoscopy images with artifacts using ensemble learning](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9669827) <br> Junxiao Zhou, Zhan Yang, Dinghao Xi, Shoujun Dai, Zhiqiang Feng, Junyan Li, Wei Xu, Hong Wang<br>World Journal of Gastroenterology, Volume 28, Issue 41, 2022.
+- [Enhanced segmentation of gastrointestinal polyps from capsule endoscopy images with artifacts using ensemble learning](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9669827) <br> Junxiao Zhou, Zhan Yang, **Dinghao Xi**, Shoujun Dai, Zhiqiang Feng, Junyan Li, Wei Xu, Hong Wang<br>World Journal of Gastroenterology, Volume 28, Issue 41, 2022.
   
 - [A multimodal time-series method for gifting prediction in live streaming platforms](https://www.sciencedirect.com/science/article/pii/S0306457322003557) <br>**Dinghao Xi**, Liumin Tang, Runyu Chen, Wei Xu<br>Information Processing & Management, Volume 60, Issue 3, 2023.
 
