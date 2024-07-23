@@ -44,7 +44,7 @@ My current research focuses on practical problems that artificial intelligence f
 ---
 
 ## News and Updates
-- ** July 2024 **: Join SUFE as AP.Fighting.
+- **July 2024**: Join SUFE as AP. Keep fighting.
 - **Oct 19th 2023**：Recently, our paper are accepted to IJEC.
 - **Aug 13rd 2023**：Luckily, our papers are conditionally accepted to ICIS 2023 and CIST 2023.
 - **July 2023 - Present**：Large Language Model Algorithm Intern at Beijing Zhongke Wenge Technology Co., Ltd.
