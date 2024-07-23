@@ -4,7 +4,7 @@ layout: page
 
 # About Me
 
-<img src="https://dinghaoxi.github.io/Singapore.jpg" class="floatpic" style="max-width: 100%; height: auto;">
+<img src="https://dinghaoxi.github.io/ruc.jpg" class="floatpic" style="max-width: 100%; height: auto;">
 
 Here is **Dinghao Xi (奚鼎昊)**.
 
