@@ -14,7 +14,7 @@ I am an Assistant Professor at Shanghai University of Finance and Economics, hol
 
 ## Academic Background
 - **Shanghai University of Finance and Economics**
-  - **2024.07 - Now:** Department of Digital Economics, Assistant Professor
+  - **2024.07 - Now:** School of Digital Economics, Assistant Professor
 
 - **Renmin University of China**
   - **2019.09 - 2024.06:** Ph.D., Computer Tech.
