@@ -19,6 +19,7 @@ Lastest Update: 23th Jun 2024&nbsp;
 
 - [Discrete emotion synchronicity and video engagement on social media: A moment-to-moment analysis](https://www.tandfonline.com/doi/abs/10.1080/10864415.2023.2295072) <br>**Dinghao Xi**, Jilei Zhou, Wei Xu, Liumin Tang <br>International Journal of Electronic Commerce, Volume 28, Issue 1, 2024.
 
+- [CAT-LLM: Style-enhanced Large Language Models with Text Style Definition for Chinese Article-style Transfer](https://dl.acm.org/doi/10.1145/3744250) <br>Zhen Tao, **Dinghao Xi (Corresponding Author)**, Zhiyu Li, Liumin Tang, Wei Xu<br> ACM Transactions on Knowledge Discovery from Data, Forthcoming, 2025.
 
 ## Conference Paper
 - [Unveiling the secrets of collaboration on video-sharing platforms](https://aisel.aisnet.org/icis2023/socmedia_digcollab/socmedia_digcollab/5/) <br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br> Accepted to ICIS 2023 and CIST 2023.<br>
