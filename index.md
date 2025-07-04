@@ -61,3 +61,5 @@ My current research focuses on practical problems that artificial intelligence f
   - Internet Research
   - Information Processing & Management
   - ACM Transactions on Knowledge Discovery from Data (TKDD)
+  - International Journal of Human-Computer Interaction
+  - Humanities and Social Sciences Communications
