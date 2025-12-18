@@ -21,8 +21,10 @@ Lastest Update: 24th Jun 2025&nbsp;
 
 - [CAT-LLM: Style-enhanced Large Language Models with Text Style Definition for Chinese Article-style Transfer](https://dl.acm.org/doi/10.1145/3744250) <br>Zhen Tao, **Dinghao Xi (Corresponding Author)**, Zhiyu Li, Liumin Tang, Wei Xu<br> ACM Transactions on Knowledge Discovery from Data, Volume 19, Issue 7, 2025.
 
-- [Detecting LLM-generated peer reviews: A syntactic-semantic collaborative framework with rhetorical structure analysis](https://www.sciencedirect.com/science/article/pii/S0020025525009946) <br>Zhen Tao, **Dinghao Xi (Corresponding Author 1)**, Zhiyu Li (Corresponding Author 2), Jinxiang Zhao, Wei Xu<br> Information Sciences, Forthcoming, 2025.
+- [Detecting LLM-generated peer reviews: A syntactic-semantic collaborative framework with rhetorical structure analysis](https://www.sciencedirect.com/science/article/pii/S0020025525009946) <br>Zhen Tao, **Dinghao Xi (Corresponding Author 1)**, Zhiyu Li (Corresponding Author 2), Jinxiang Zhao, Wei Xu<br> Information Sciences, Volume 729, 122858, 2026.
 
+- [Towards reliable detection of LLM-Generated texts: A comprehensive evaluation framework with CUDRT](https://dl.acm.org/doi/abs/10.1145/3779427) <br>Zhen Tao, Yanfang Chen (Corresponding Author 1), Dinghao Xi **(Corresponding Author 2)**, Zhiyu Li, Wei Xu<br> ACM Transactions on Intelligent Systems and Technology, Forthcoming, 2025.
+ 
 
 ## Conference Paper
 - [Unveiling the secrets of collaboration on video-sharing platforms](https://aisel.aisnet.org/icis2023/socmedia_digcollab/socmedia_digcollab/5/) <br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br> Accepted to ICIS 2023 and CIST 2023.<br>
@@ -30,5 +32,6 @@ Lastest Update: 24th Jun 2025&nbsp;
 ---
 
 ## Working Paper (Partial)
-- [CUDRT: Benchmarking the Detection of Human vs. Large Language Models Generated Texts](https://arxiv.org/abs/2406.09056) <br> Zhen Tao, Zhiyu Li, **Dinghao Xi**, Wei Xu.
+- Something about LLM in Social Media
+- Something about supply chain
 
