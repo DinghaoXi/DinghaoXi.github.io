@@ -24,6 +24,8 @@ Lastest Update: 24th Jun 2025&nbsp;
 - [Detecting LLM-generated peer reviews: A syntactic-semantic collaborative framework with rhetorical structure analysis](https://www.sciencedirect.com/science/article/pii/S0020025525009946) <br>Zhen Tao, **Dinghao Xi (Corresponding Author 1)**, Zhiyu Li (Corresponding Author 2), Jinxiang Zhao, Wei Xu<br> Information Sciences, Volume 729, 122858, 2026.
 
 - [Towards reliable detection of LLM-Generated texts: A comprehensive evaluation framework with CUDRT](https://dl.acm.org/doi/abs/10.1145/3779427) <br>Zhen Tao, Yanfang Chen (Corresponding Author 1), Dinghao Xi **(Corresponding Author 2)**, Zhiyu Li, Wei Xu<br> ACM Transactions on Intelligent Systems and Technology, Volume 17, Issue 2, 2026.
+
+- [Unveiling large language models generated texts: A multi-level fine-grained detection framework](https://www.sciencedirect.com/science/article/pii/S0167923626000448) <br>Wei Xu, Zhen Tao, Runyu Chen, Dinghao Xi**Dinghao Xi (Corresponding Author 1)**, Zhiyu Li(Corresponding Author 2)<br>Decision Support Systems, Volumn 205, 114655, 2026.
  
 
 ## Conference Paper
