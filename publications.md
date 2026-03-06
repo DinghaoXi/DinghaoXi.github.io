@@ -6,7 +6,7 @@ title: Publications
 
 # Publications
 
-Lastest Update: 24th Jun 2025&nbsp; 
+Lastest Update: 6th March 2026&nbsp; 
 
 ## Journal Paper
 - [Sending or not? A multimodal framework for Danmaku comment prediction](https://www.sciencedirect.com/science/article/pii/S0306457321001722) <br>**Dinghao Xi**, Wei Xu, Runyu Chen, Yuhang Zhou, Zhan Yang<br>Information Processing & Management, Volume 58, Issue 6, 2021.
