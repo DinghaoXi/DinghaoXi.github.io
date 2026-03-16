@@ -64,3 +64,4 @@ My current research focuses on practical problems that artificial intelligence f
   - International Journal of Human-Computer Interaction
   - Humanities and Social Sciences Communications
   - Neurocomputing
+  - Scientific Reports
