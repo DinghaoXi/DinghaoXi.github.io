@@ -9,43 +9,46 @@ description: Research and teaching projects led by Dinghao Xi.
 
 # Projects
 
-## Research Projects
+<p class="projects-intro">All projects below are led by Dinghao Xi.</p>
 
-1. **Differentiated Causal Pathways and Temporal Dynamics through Which Interaction Credibility in Emotional Companion Agents Shapes User Trust**
-   - Program: Young Scientists Fund of the National Natural Science Foundation of China (Competitive Research Grant)
-   - Role: Principal Investigator
-   - Period: 2027–2029
-   - Funding: RMB 300,000
+<section class="projects-section" aria-labelledby="research-projects">
+  <h2 id="research-projects">Research Projects</h2>
+  <div class="project-list">
+    <article class="project-entry">
+      <h3>Differentiated Causal Pathways and Temporal Dynamics through Which Interaction Credibility in Emotional Companion Agents Shapes User Trust</h3>
+      <p class="project-program">Young Scientists Fund of the National Natural Science Foundation of China (Competitive Research Grant)</p>
+      <p class="project-meta"><span>2027–2029</span></p>
+    </article>
+    <article class="project-entry">
+      <h3>Prospects for the Application of Artificial Intelligence and Other Emerging Technologies in Money-Laundering Risk Prevention and Anti-Money Laundering Compliance</h3>
+      <p class="project-program">Industry-Sponsored Research Project with China UnionPay Co., Ltd.</p>
+      <p class="project-meta"><span>2026–2027</span></p>
+    </article>
+    <article class="project-entry">
+      <h3>Predicting Consumer Behavior in E-commerce Livestreaming Based on Multimodal Deep Learning</h3>
+      <p class="project-program">Fundamental Research Funds for the Central Universities Project at Shanghai University of Finance and Economics (Internal Project)</p>
+      <p class="project-meta"><span>2024–2026</span></p>
+    </article>
+  </div>
+</section>
 
-2. **Prospects for the Application of Artificial Intelligence and Other Emerging Technologies in Money-Laundering Risk Prevention and Anti-Money Laundering Compliance**
-   - Program: Industry-Sponsored Research Project with China UnionPay Co., Ltd.
-   - Role: Principal Investigator
-   - Period: 2026–2027
-   - Funding: RMB 300,000
-
-3. **Predicting Consumer Behavior in E-commerce Livestreaming Based on Multimodal Deep Learning**
-   - Program: Fundamental Research Funds for the Central Universities Project at Shanghai University of Finance and Economics (Internal Project)
-   - Role: Principal Investigator
-   - Period: 2024–2026
-   - Funding: RMB 90,000
-
-## Teaching Reform and Course Development Projects
-
-1. **Development of the Undergraduate Course “Applications of Large Language Models in Economics and Management”**
-   - Program: 2025 Integrated Practice Course Development Project at Shanghai University of Finance and Economics (Internal Project)
-   - Role: Principal Investigator
-   - Period: 2025–2026
-   - Funding: RMB 30,000
-
-2. **Scenario-Based Teaching Reform for Interdisciplinary Courses Empowered by AR/VR**
-   - Program: Key Undergraduate Teaching Reform Project at Shanghai University of Finance and Economics (Internal Project)
-   - Course: Undergraduate course “Applications of Large Language Models in Economics and Management”
-   - Role: Principal Investigator
-   - Period: 2026–2028
-   - Funding: RMB 60,000
-
-3. **Development of the Graduate Course “Data Science”**
-   - Program: 2026 Graduate “AI+” Development Project at Shanghai University of Finance and Economics (Internal Project)
-   - Role: Principal Investigator
-   - Period: 2026–2027
-   - Funding: RMB 50,000
+<section class="projects-section" aria-labelledby="teaching-projects">
+  <h2 id="teaching-projects">Teaching Reform and Course Development Projects</h2>
+  <div class="project-list">
+    <article class="project-entry">
+      <h3>Development of the Undergraduate Course “Applications of Large Language Models in Economics and Management”</h3>
+      <p class="project-program">2025 Integrated Practice Course Development Project at Shanghai University of Finance and Economics (Internal Project)</p>
+      <p class="project-meta"><span>2025–2026</span></p>
+    </article>
+    <article class="project-entry">
+      <h3>Scenario-Based Teaching Reform for Interdisciplinary Courses Empowered by AR/VR</h3>
+      <p class="project-program">Key Undergraduate Teaching Reform Project at Shanghai University of Finance and Economics (Internal Project), based on “Applications of Large Language Models in Economics and Management”</p>
+      <p class="project-meta"><span>2026–2028</span></p>
+    </article>
+    <article class="project-entry">
+      <h3>Development of the Graduate Course “Data Science”</h3>
+      <p class="project-program">2026 Graduate “AI+” Development Project at Shanghai University of Finance and Economics (Internal Project)</p>
+      <p class="project-meta"><span>2026–2027</span></p>
+    </article>
+  </div>
+</section>

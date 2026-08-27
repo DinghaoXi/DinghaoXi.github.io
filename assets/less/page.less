@@ -18,28 +18,66 @@ html {
 	.suffix(12,1);
 	margin-bottom: 1em;
 }
-.top-navigation {
+.navigation-row {
 	.container();
 	.grid(12,10);
 	.prefix(12,1);
 	.suffix(12,1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1em;
 	margin-bottom: 1em;
 }
 .top-navigation {
+	flex: 1 1 auto;
+	min-width: 0;
 	ul {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 1em;
 		list-style: none;
 		margin: 0;
 		padding: 0;
 	}
 	li {
 		list-style-type: none;
-		display: inline;
-		margin-right: 25px;
+		display: block;
+		margin: 0;
 		a { 
 			decoration: none;
 			border-bottom: 0 solid transparent;
+			white-space: nowrap;
 			.transition(all .2s);
 		}
+	}
+}
+.top-navigation-current {
+	text-decoration: overline;
+}
+.language-switch {
+	display: inline-block;
+	flex: 0 0 auto;
+	white-space: nowrap;
+	padding: 0.25em 0.55em;
+	border: 1px solid lighten(@textcolor, 65%);
+	border-radius: 3px;
+	color: @linkcolor;
+	font-size: 80%;
+	line-height: 1.2;
+	.transition(all .2s);
+	&:visited {
+		color: @linkcolor;
+	}
+	&:hover {
+		border-color: lighten(@textcolor, 35%);
+		color: @linkcolorhover;
+	}
+	&:focus,
+	&:focus-visible {
+		outline: 2px solid lighten(@textcolor, 20%);
+		outline-offset: 2px;
+		color: @linkcolorfocus;
 	}
 }
 #main {
@@ -117,6 +155,56 @@ html {
 	h3 {
 		.delta();
 	}
+}
+.projects-intro {
+	margin-bottom: 2em;
+	text-indent: 0;
+}
+.projects-section {
+	margin-top: 2.5em;
+	> h2 {
+		text-align: left;
+	}
+}
+.project-list {
+	border-top: 1px solid lighten(@textcolor, 72%);
+}
+.project-entry {
+	min-width: 0;
+	padding: 1.25em 0;
+	border-bottom: 1px solid lighten(@textcolor, 72%);
+	overflow-wrap: break-word;
+	h3 {
+		margin: 0 0 0.45em;
+		font-size: 1.15em;
+		line-height: 1.4;
+		text-align: left;
+	}
+	p {
+		text-indent: 0;
+		text-align: left;
+	}
+}
+#main article.project-entry {
+	display: block;
+	float: none;
+	width: 100%;
+	margin: 0;
+}
+.project-program {
+	margin: 0 0 0.4em;
+	line-height: 1.5;
+}
+.project-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: baseline;
+	gap: 0.15em 0.4em;
+	margin: 0;
+	color: lighten(@textcolor, 25%);
+	font-family: @baseheadingfont;
+	font-size: 90%;
+	line-height: 1.45;
 }
 .byline {
 	clear: both;

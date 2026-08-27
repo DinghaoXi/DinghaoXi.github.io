@@ -7,20 +7,22 @@
 	</div><!-- /.site-name -->
   {% assign links = site.data.navigation[page_lang] %}
   {% assign current_url = page.url | remove: 'index.html' %}
-	<div class="top-navigation">
-		<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-		    <ul>
-		        {% for link in links %}
+	<div class="navigation-row">
+		<div class="top-navigation">
+			<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			    <ul>
+			        {% for link in links %}
             <li><a href="{{ link.url | relative_url }}" {% if current_url == link.url %}class="top-navigation-current" aria-current="page"{% endif %}>{{ link.title }}</a></li>
-		        {% endfor %}
-		        {% if page.alternate_url %}
-              {% if page_lang == 'zh-CN' %}
-                <li><a href="{{ page.alternate_url | relative_url }}" lang="en" hreflang="en" aria-label="Switch to English">EN</a></li>
-              {% else %}
-                <li><a href="{{ page.alternate_url | relative_url }}" lang="zh-CN" hreflang="zh-CN" aria-label="切换至中文">中文</a></li>
-              {% endif %}
-            {% endif %}
-		    </ul>
-		</nav>
-	</div><!-- /.top-navigation -->
+			        {% endfor %}
+			    </ul>
+			</nav>
+		</div><!-- /.top-navigation -->
+        {% if page.alternate_url %}
+          {% if page_lang == 'zh-CN' %}
+            <a class="language-switch" href="{{ page.alternate_url | relative_url }}" lang="en" hreflang="en" aria-label="Switch to English">EN</a>
+          {% else %}
+            <a class="language-switch" href="{{ page.alternate_url | relative_url }}" lang="zh-CN" hreflang="zh-CN" aria-label="切换至中文">中文</a>
+          {% endif %}
+        {% endif %}
+	</div><!-- /.navigation-row -->
 </div><!-- /.navigation-wrapper -->

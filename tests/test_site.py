@@ -63,8 +63,8 @@ RENDERED_PAGE_CONTRACTS = {
             "zh-CN": SITE_URL + "/zh/",
             "x-default": SITE_URL + "/",
         },
-        "navigation": ("About Me", "Publications", "Projects", "中文"),
-        "switch": {"text": "中文", "href": "/zh/", "lang": "zh-CN", "hreflang": "zh-CN"},
+        "navigation": ("About Me", "Publications", "Projects"),
+        "switch": {"text": "中文", "href": "/zh/", "lang": "zh-CN", "hreflang": "zh-CN", "aria-label": "切换至中文"},
     },
     "publications/index.html": {
         "lang": "en",
@@ -74,12 +74,13 @@ RENDERED_PAGE_CONTRACTS = {
             "zh-CN": SITE_URL + "/zh/publications/",
             "x-default": SITE_URL + "/publications/",
         },
-        "navigation": ("About Me", "Publications", "Projects", "中文"),
+        "navigation": ("About Me", "Publications", "Projects"),
         "switch": {
             "text": "中文",
             "href": "/zh/publications/",
             "lang": "zh-CN",
             "hreflang": "zh-CN",
+            "aria-label": "切换至中文",
         },
     },
     "projects/index.html": {
@@ -90,12 +91,13 @@ RENDERED_PAGE_CONTRACTS = {
             "zh-CN": SITE_URL + "/zh/projects/",
             "x-default": SITE_URL + "/projects/",
         },
-        "navigation": ("About Me", "Publications", "Projects", "中文"),
+        "navigation": ("About Me", "Publications", "Projects"),
         "switch": {
             "text": "中文",
             "href": "/zh/projects/",
             "lang": "zh-CN",
             "hreflang": "zh-CN",
+            "aria-label": "切换至中文",
         },
     },
     "zh/index.html": {
@@ -106,8 +108,8 @@ RENDERED_PAGE_CONTRACTS = {
             "zh-CN": SITE_URL + "/zh/",
             "x-default": SITE_URL + "/",
         },
-        "navigation": ("关于我", "发表成果", "项目", "EN"),
-        "switch": {"text": "EN", "href": "/", "lang": "en", "hreflang": "en"},
+        "navigation": ("关于我", "发表成果", "项目"),
+        "switch": {"text": "EN", "href": "/", "lang": "en", "hreflang": "en", "aria-label": "Switch to English"},
     },
     "zh/publications/index.html": {
         "lang": "zh-CN",
@@ -117,12 +119,13 @@ RENDERED_PAGE_CONTRACTS = {
             "zh-CN": SITE_URL + "/zh/publications/",
             "x-default": SITE_URL + "/publications/",
         },
-        "navigation": ("关于我", "发表成果", "项目", "EN"),
+        "navigation": ("关于我", "发表成果", "项目"),
         "switch": {
             "text": "EN",
             "href": "/publications/",
             "lang": "en",
             "hreflang": "en",
+            "aria-label": "Switch to English",
         },
     },
     "zh/projects/index.html": {
@@ -133,12 +136,13 @@ RENDERED_PAGE_CONTRACTS = {
             "zh-CN": SITE_URL + "/zh/projects/",
             "x-default": SITE_URL + "/projects/",
         },
-        "navigation": ("关于我", "发表成果", "项目", "EN"),
+        "navigation": ("关于我", "发表成果", "项目"),
         "switch": {
             "text": "EN",
             "href": "/projects/",
             "lang": "en",
             "hreflang": "en",
+            "aria-label": "Switch to English",
         },
     },
 }
@@ -151,12 +155,14 @@ class RenderedPageParser(HTMLParser):
         self.canonical_urls = []
         self.alternate_urls = []
         self.navigation_links = []
+        self.language_switch_links = []
         self.site_name_links = []
         self.strong_texts = []
         self.bio_photo_alts = []
         self.root_relative_targets = []
         self._navigation_depth = 0
         self._navigation_anchor = None
+        self._language_switch_anchor = None
         self._site_name_depth = 0
         self._site_name_anchor = None
         self._strong_depth = 0
@@ -193,9 +199,11 @@ class RenderedPageParser(HTMLParser):
 
         if tag == "nav":
             self._navigation_depth += 1
-        elif tag == "a" and self._navigation_depth:
+        if tag == "a" and self._navigation_depth:
             self._navigation_anchor = {"attributes": attributes, "text": []}
-        elif tag == "a" and self._site_name_depth:
+        if tag == "a" and "language-switch" in (attributes.get("class") or "").split():
+            self._language_switch_anchor = {"attributes": attributes, "text": []}
+        if tag == "a" and self._site_name_depth:
             self._site_name_anchor = {"attributes": attributes, "text": []}
 
         if tag == "strong":
@@ -206,6 +214,8 @@ class RenderedPageParser(HTMLParser):
     def handle_data(self, data):
         if self._navigation_anchor is not None:
             self._navigation_anchor["text"].append(data)
+        if self._language_switch_anchor is not None:
+            self._language_switch_anchor["text"].append(data)
         if self._site_name_anchor is not None:
             self._site_name_anchor["text"].append(data)
         if self._strong_depth:
@@ -222,6 +232,15 @@ class RenderedPageParser(HTMLParser):
             self._navigation_anchor = None
         elif tag == "nav" and self._navigation_depth:
             self._navigation_depth -= 1
+
+        if tag == "a" and self._language_switch_anchor is not None:
+            self.language_switch_links.append(
+                {
+                    "attributes": self._language_switch_anchor["attributes"],
+                    "text": " ".join("".join(self._language_switch_anchor["text"]).split()),
+                }
+            )
+            self._language_switch_anchor = None
 
         if tag == "a" and self._site_name_anchor is not None:
             self.site_name_links.append(
@@ -298,24 +317,58 @@ class SiteContractTest(unittest.TestCase):
             with self.subTest(label=label):
                 self.assert_contains(navigation, label, "_data/navigation.yml")
 
-    def test_projects_contain_required_funding_and_principal_investigator_text(self):
-        english = read_file("projects.md")
-        chinese = read_file("zh/projects.md")
-        self.assertIsNotNone(english, "required page file is missing: projects.md")
-        self.assertIsNotNone(chinese, "required page file is missing: zh/projects.md")
-        for phrase in ("Principal Investigator", "RMB 300,000", "RMB 90,000", "RMB 60,000"):
-            with self.subTest(language="en", phrase=phrase):
-                self.assert_contains(english, phrase, "projects.md")
-        for phrase in ("负责人：奚鼎昊", "30万元", "9万元", "6万元", "5万元", "3万元"):
-            with self.subTest(language="zh", phrase=phrase):
-                self.assert_contains(chinese, phrase, "zh/projects.md")
-        for text, language in ((english, "en"), (chinese, "zh")):
-            with self.subTest(language=language, phrase="forbidden total"):
-                self.assertIsNotNone(text, "projects source unexpectedly missing: %s" % language)
-                if re.search(r"83\s*万元", text or ""):
-                    self.fail("forbidden marker %r in %s" % ("83\\s*万元", language))
-                if "RMB 830,000" in (text or ""):
-                    self.fail("forbidden marker %r in %s" % ("RMB 830,000", language))
+    def test_projects_use_compact_unnumbered_entries(self):
+        page_contracts = {
+            "en": {
+                "source": "projects.md",
+                "rendered": "projects/index.html",
+                "intro": "All projects below are led by Dinghao Xi.",
+                "forbidden_role": "Principal Investigator",
+                "forbidden_amount": r"RMB\s*[\d,]+",
+                "periods": {
+                    "2027–2029": 1,
+                    "2026–2027": 2,
+                    "2024–2026": 1,
+                    "2025–2026": 1,
+                    "2026–2028": 1,
+                },
+            },
+            "zh": {
+                "source": "zh/projects.md",
+                "rendered": "zh/projects/index.html",
+                "intro": "本人主持的项目如下。",
+                "forbidden_role": "负责人：奚鼎昊",
+                "forbidden_amount": r"\d+\s*万元",
+                "periods": {
+                    "2027—2029年": 1,
+                    "2026—2027年": 2,
+                    "2024—2026年": 1,
+                    "2025—2026年": 1,
+                    "2026—2028年": 1,
+                },
+            },
+        }
+
+        for language, contract in page_contracts.items():
+            source = read_file(contract["source"])
+            self.assertIsNotNone(
+                source, "required page file is missing: %s" % contract["source"]
+            )
+            rendered, _ = self.rendered_page(contract["rendered"])
+
+            for artifact, text in (("source", source), ("rendered", rendered)):
+                with self.subTest(language=language, artifact=artifact):
+                    self.assertEqual(text.count(contract["intro"]), 1)
+                    self.assertEqual(text.count('class="project-entry"'), 6)
+                    self.assertNotRegex(text, r"(?m)^\d+\.\s")
+                    self.assertNotIn(contract["forbidden_role"], text)
+                    self.assertNotRegex(text, contract["forbidden_amount"])
+                    self.assertNotIn("project-meta__separator", text)
+                    for period, count in contract["periods"].items():
+                        with self.subTest(
+                            language=language, artifact=artifact, period=period
+                        ):
+                            self.assertEqual(text.count(period), count)
 
     def test_sitemap_contains_all_bilingual_site_url_routes(self):
         sitemap = read_file("sitemap.xml")
@@ -383,15 +436,13 @@ class SiteContractTest(unittest.TestCase):
                     tuple(link["text"] for link in parsed.navigation_links),
                     expected["navigation"],
                 )
-                switches = [
-                    link
-                    for link in parsed.navigation_links
-                    if link["attributes"].get("hreflang")
-                ]
-                self.assertEqual(len(switches), 1)
-                switch = switches[0]
+                self.assertTrue(
+                    all("hreflang" not in link["attributes"] for link in parsed.navigation_links)
+                )
+                self.assertEqual(len(parsed.language_switch_links), 1)
+                switch = parsed.language_switch_links[0]
                 self.assertEqual(switch["text"], expected["switch"]["text"])
-                for attribute_name in ("href", "lang", "hreflang"):
+                for attribute_name in ("href", "lang", "hreflang", "aria-label"):
                     self.assertEqual(
                         switch["attributes"].get(attribute_name),
                         expected["switch"][attribute_name],
