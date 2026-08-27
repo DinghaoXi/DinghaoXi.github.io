@@ -1,0 +1,15 @@
+en:
+  - title: About Me
+    url: /
+  - title: Publications
+    url: /publications/
+  - title: Projects
+    url: /projects/
+
+zh-CN:
+  - title: 关于我
+    url: /zh/
+  - title: 发表成果
+    url: /zh/publications/
+  - title: 项目
+    url: /zh/projects/

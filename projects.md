@@ -2,58 +2,50 @@
 layout: page
 permalink: /projects/index.html
 title: Projects
+lang: en
+alternate_url: /zh/projects/
+description: Research and teaching projects led by Dinghao Xi.
 ---
 
-# Research Projects
+# Projects
 
-P.S., click the hyperlink title to access the source.<br>
+## Research Projects
 
-#### [OpenIoT: Industrial Inspection System](https://fzuiot.site/)
+1. **Differentiated Causal Pathways and Temporal Dynamics through Which Interaction Credibility in Emotional Companion Agents Shapes User Trust**
+   - Program: Young Scientists Fund of the National Natural Science Foundation of China (Competitive Research Grant)
+   - Role: Principal Investigator
+   - Period: 2027–2029
+   - Funding: RMB 300,000
 
-<center>
-<img src="/images/openiot-system.png">
-</center>
+2. **Prospects for the Application of Artificial Intelligence and Other Emerging Technologies in Money-Laundering Risk Prevention and Anti-Money Laundering Compliance**
+   - Program: Industry-Sponsored Research Project with China UnionPay Co., Ltd.
+   - Role: Principal Investigator
+   - Period: 2026–2027
+   - Funding: RMB 300,000
 
-<br>
+3. **Predicting Consumer Behavior in E-commerce Livestreaming Based on Multimodal Deep Learning**
+   - Program: Fundamental Research Funds for the Central Universities Project at Shanghai University of Finance and Economics (Internal Project)
+   - Role: Principal Investigator
+   - Period: 2024–2026
+   - Funding: RMB 90,000
 
-#### [Multi-objective Optimization Strategy Model (MCM-2023)](https://caihanlin.com/mypaper/modeling/202302COMAP.pdf)
+## Teaching Reform and Course Development Projects
 
-<center>
-<img src="/images/MCM-figure3.jpg">
-</center>
-<br>
+1. **Development of the Undergraduate Course “Applications of Large Language Models in Economics and Management”**
+   - Program: 2025 Integrated Practice Course Development Project at Shanghai University of Finance and Economics (Internal Project)
+   - Role: Principal Investigator
+   - Period: 2025–2026
+   - Funding: RMB 30,000
 
-#### [ResNet-AHP: Feedback ResNet-50 for TSD](https://caihanlin.com/mypaper/202302ICAROB.pdf)
+2. **Scenario-Based Teaching Reform for Interdisciplinary Courses Empowered by AR/VR**
+   - Program: Key Undergraduate Teaching Reform Project at Shanghai University of Finance and Economics (Internal Project)
+   - Course: Undergraduate course “Applications of Large Language Models in Economics and Management”
+   - Role: Principal Investigator
+   - Period: 2026–2028
+   - Funding: RMB 60,000
 
-<center>
-<img src="/images/resnet-ahp.png">
-</center>
-
-<br>
-
-#### [CityManager: Community Monitoring System](https://caihanlin.com/mypaper/202208cenim.pdf )
-
-<center>
-<img src="/images/iot-manager.png">
-</center>
-<br>
-
-<br>
-
----
-
-# Open-source Projects
-
-<br>
-
-#### [FZU-Flying-Book 福州大学飞跃手册](https://fzu-fly.online/)
-
-This is the flying handbook for FZU students. Many outstanding graduates of Fuzhou University leave their unique experiences, valuable wisdom, and sincere wishes in this flying-handbook.
-
-#### [FZU-LaTeX-template 精美学术模版](https://github.com/GuangLun2000/FZU-latex-template)
-
-Many elegant LaTeX templates designed for FZU students, including Beamer Theme Slides, Recommendation Letters and Undergraduate Thesis Template.
-
-#### [miec-lance 自动化系修读材料](https://github.com/GuangLun2000/miec-lance )
-
-This repo is where I keep track of my incredible journey at FZU-MIEC. You can learn RIDS & CSEE better by refering to this repo, but **please do not directly copy my assignments, codes and any reports!**
+3. **Development of the Graduate Course “Data Science”**
+   - Program: 2026 Graduate “AI+” Development Project at Shanghai University of Finance and Economics (Internal Project)
+   - Role: Principal Investigator
+   - Period: 2026–2027
+   - Funding: RMB 50,000

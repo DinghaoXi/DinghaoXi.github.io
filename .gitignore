@@ -1,0 +1,5 @@
+.worktrees/
+_site/
+.bundle/
+/vendor/
+.DS_Store

@@ -1,9 +1,8 @@
-<img src="{{ site.url }}/images/{{ site.owner.avatar }}" class="bio-photo" alt="{{ site.owner.name }} bio photo" width="100" height="100"></a>
-
-<!-- <h4>{{ site.owner.name }}</h4> -->
+{% assign page_lang = page.lang | default: 'en' %}
+<img src="{{ site.url }}/images/{{ site.owner.avatar }}" class="bio-photo" alt="{% if page_lang == 'zh-CN' %}奚鼎昊个人照片{% else %}{{ site.owner.name }} bio photo{% endif %}" width="100" height="100">
 
 <p>{{ site.owner.bio }}</p>
-{% if site.owner.email %}<p style="text-indent:0;margin-top:1.5em;"><a href="mailto:{{ site.owner.email }}" target="_blank"><i class="icon-mail"></i> Email</a></p>{% endif %}
+{% if site.owner.email %}<p style="text-indent:0;margin-top:1.5em;"><a href="mailto:{{ site.owner.email }}" target="_blank"><i class="icon-mail"></i> {% if page_lang == 'zh-CN' %}电子邮件{% else %}Email{% endif %}</a></p>{% endif %}
 
 {% if site.owner.twitter %}<p style="text-indent:0;"><a href="https://twitter.com/{{ site.owner.twitter }}"><i class="icon-twitter"></i> Twitter</a></p>{% endif %}
 
@@ -15,14 +14,10 @@
 
 {% if site.owner.instagram %}<p style="text-indent:0;"><a href="https://instagram.com/{{ site.owner.instagram }}"><i class="icon-instagram"></i> Instagram</a></p>{% endif %}
 
-{% if site.owner.github %}<p style="text-indent:0;"><a href="https://github.com/{{ site.owner.github }}"><i class="icon-github"></i> Github</a></p>{% endif %}
+{% if site.owner.github %}<p style="text-indent:0;"><a href="https://github.com/{{ site.owner.github }}"><i class="icon-github"></i> GitHub</a></p>{% endif %}
 
 {% if site.owner.lastfm %}<p style="text-indent:0;"><a href="https://lastfm.com/{{ site.owner.lastfm }}"><i class="icon-lastfm"></i> Last.fm</a></p>{% endif %}
 
 {% if site.owner.tumblr %}<p style="text-indent:0;"><a href="https://{{ site.owner.tumblr }}.tumblr.com"><i class="icon-tumblr"></i> Tumblr</a></p>{% endif %}
 
 {% if site.owner.scholar%}<p style="text-indent:0;"><a href="{{ site.owner.scholar}}"><i class="ai ai-google-scholar-square"></i> Google Scholar</a></p>{% endif %}
-
-<!-- {% if site.owner.Bilibili %}<p style="text-indent:0;"><a href="https://bilibili.com/{{ site.owner.bilibili }}"><i class="icon-bilibili"></i> Bilibili</a></p>{% endif %} -->
-
-<!-- Lastly modified by Hanlin CAI in 2023/01/15 -->

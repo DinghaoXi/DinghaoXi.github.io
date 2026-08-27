@@ -2,13 +2,16 @@
 layout: page
 permalink: /publications/index.html
 title: Publications
+lang: en
+alternate_url: /zh/publications/
+description: Publications by Dinghao Xi.
 ---
 
 # Publications
 
-Lastest Update: 6th March 2026&nbsp; 
+Last updated: 6th March 2026&nbsp;
 
-## Journal Paper
+## Journal Articles
 - [Sending or not? A multimodal framework for Danmaku comment prediction](https://www.sciencedirect.com/science/article/pii/S0306457321001722) <br>**Dinghao Xi**, Wei Xu, Runyu Chen, Yuhang Zhou, Zhan Yang<br>Information Processing & Management, Volume 58, Issue 6, 2021.
   
 - [Enhanced segmentation of gastrointestinal polyps from capsule endoscopy images with artifacts using ensemble learning](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9669827) <br> Junxiao Zhou, Zhan Yang, **Dinghao Xi**, Shoujun Dai, Zhiqiang Feng, Junyan Li, Wei Xu, Hong Wang<br>World Journal of Gastroenterology, Volume 28, Issue 41, 2022.
@@ -23,17 +26,10 @@ Lastest Update: 6th March 2026&nbsp;
 
 - [Detecting LLM-generated peer reviews: A syntactic-semantic collaborative framework with rhetorical structure analysis](https://www.sciencedirect.com/science/article/pii/S0020025525009946) <br>Zhen Tao, **Dinghao Xi (Corresponding Author 1)**, Zhiyu Li (Corresponding Author 2), Jinxiang Zhao, Wei Xu<br> Information Sciences, Volume 729, 122858, 2026.
 
-- [Towards reliable detection of LLM-Generated texts: A comprehensive evaluation framework with CUDRT](https://dl.acm.org/doi/abs/10.1145/3779427) <br>Zhen Tao, Yanfang Chen (Corresponding Author 1), Dinghao Xi **(Corresponding Author 2)**, Zhiyu Li, Wei Xu<br> ACM Transactions on Intelligent Systems and Technology, Volume 17, Issue 2, 2026.
+- [Toward Reliable Detection of LLM-Generated Texts: A Comprehensive Evaluation Framework with CUDRT](https://dl.acm.org/doi/abs/10.1145/3779427) <br>Zhen Tao, Yanfang Chen (Corresponding Author 1), **Dinghao Xi (Corresponding Author 2)**, Zhiyu Li, Wei Xu<br> ACM Transactions on Intelligent Systems and Technology, Volume 17, Issue 2, 2026.
 
-- [Unveiling large language models generated texts: A multi-level fine-grained detection framework](https://www.sciencedirect.com/science/article/pii/S0167923626000448) <br>Wei Xu, Zhen Tao, Runyu Chen, **Dinghao Xi (Corresponding Author 1)**, Zhiyu Li(Corresponding Author 2)<br>Decision Support Systems, Volumn 205, 114655, 2026.
+- [Unveiling large language models generated texts: A multi-level fine-grained detection framework](https://www.sciencedirect.com/science/article/pii/S0167923626000448) <br>Wei Xu, Zhen Tao, Runyu Chen, **Dinghao Xi (Corresponding Author 1)**, Zhiyu Li (Corresponding Author 2)<br>Decision Support Systems, Volume 205, 114655, 2026.
  
 
-## Conference Paper
+## Conference Papers
 - [Unveiling the secrets of collaboration on video-sharing platforms](https://aisel.aisnet.org/icis2023/socmedia_digcollab/socmedia_digcollab/5/) <br>**Dinghao Xi**, Ying Lu, Dandan Qiao, Wei Xu<br> Accepted to ICIS 2023 and CIST 2023.<br>
-
----
-
-## Working Paper (Partial)
-- Something about LLM in Social Media
-- Something about supply chain
-

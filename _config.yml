@@ -10,9 +10,6 @@ owner:
   avatar: xdh.jpg
 #  bio:
   email: xidinghao@mail.shufe.edu.cn
-  # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  # twitter: lancecai2002
-  # facebook: caihanlin2002
   github: DinghaoXi
   linkedin: dinghao-xi-433161141
   scholar: https://scholar.google.com/citations?user=nqXcOIEAAAAJ
@@ -29,24 +26,8 @@ google_verify: "SkiyuGpJOKT74vv5GmXLvYXXDkXy4v8VWPtbelYz3Hs"
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 # bing_verify: ""
 
-# Links to include in top navigation
-# For external links add external: true
-links:
-  - title: About Me
-    url: /
-  - title: Publications
-    url: /publications/
-  # - title: Projects
-  #   url: /projects/
-  # - title: Awards
-  #   url: /awards/
-  # - title: Hobbies
-  #   url: /hobbies/
-  # - title: Blogs
-  #   url: /blogs/
-
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-timezone: China/Beijing
+timezone: Asia/Shanghai
 future: true
 highlighter: rouge
 # markdown: kramdown
@@ -73,12 +54,8 @@ kramdown:
   #   coderay_css: class
 
 
-# disqus settings:
-disqus:
-  shortname: lancecai
-
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
+exclude: ["docs", "tests", "scripts", "vendor", "Gemfile", "Gemfile.lock", ".bundle", ".worktrees", "lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "minimal-mistakes.sublime-project", "minimal-mistakes.sublime-workspace"]
 
 
 # Latest update in 2023/08/03 by Dinghao Xi.
