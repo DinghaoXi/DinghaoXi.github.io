@@ -167,6 +167,12 @@ class RenderedPageParser(HTMLParser):
         self._site_name_anchor = None
         self._strong_depth = 0
         self._strong_text = []
+        self.footer_texts = []
+        self.footer_container_texts = []
+        self._footer_depth = 0
+        self._footer_container_text = []
+        self._footer_heading_depth = 0
+        self._footer_heading_text = []
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
@@ -211,6 +217,16 @@ class RenderedPageParser(HTMLParser):
                 self._strong_text = []
             self._strong_depth += 1
 
+        if tag == "footer":
+            if not self._footer_depth:
+                self._footer_container_text = []
+            self._footer_depth += 1
+
+        if tag == "h6" and self._footer_depth:
+            if not self._footer_heading_depth:
+                self._footer_heading_text = []
+            self._footer_heading_depth += 1
+
     def handle_data(self, data):
         if self._navigation_anchor is not None:
             self._navigation_anchor["text"].append(data)
@@ -220,6 +236,10 @@ class RenderedPageParser(HTMLParser):
             self._site_name_anchor["text"].append(data)
         if self._strong_depth:
             self._strong_text.append(data)
+        if self._footer_depth:
+            self._footer_container_text.append(data)
+        if self._footer_heading_depth and self._footer_depth:
+            self._footer_heading_text.append(data)
 
     def handle_endtag(self, tag):
         if tag == "a" and self._navigation_anchor is not None:
@@ -257,6 +277,20 @@ class RenderedPageParser(HTMLParser):
             self._strong_depth -= 1
             if not self._strong_depth:
                 self.strong_texts.append(" ".join("".join(self._strong_text).split()))
+
+        if tag == "h6" and self._footer_heading_depth:
+            self._footer_heading_depth -= 1
+            if not self._footer_heading_depth:
+                self.footer_texts.append(
+                    " ".join("".join(self._footer_heading_text).split())
+                )
+
+        if tag == "footer" and self._footer_depth:
+            self._footer_depth -= 1
+            if not self._footer_depth:
+                self.footer_container_texts.append(
+                    " ".join("".join(self._footer_container_text).split())
+                )
 
 
 def read_file(relative_path):
@@ -620,6 +654,60 @@ class SiteContractTest(unittest.TestCase):
             with self.subTest(contract="root-relative-source", page=source_path):
                 source = read_file(source_path)
                 self.assert_contains(source, '<img src="/ruc.jpg"', source_path)
+
+    def test_footer_is_localized_build_date_without_technical_attribution(self):
+        patterns = {
+            "en": re.compile(
+                r"^© (?P<year>\d{4}) Dinghao Xi · Last updated: "
+                r"(?:January|February|March|April|May|June|July|August|"
+                r"September|October|November|December) "
+                r"(?:[1-9]|[12]\d|3[01]), (?P=year)$"
+            ),
+            "zh-CN": re.compile(
+                r"^© (?P<year>\d{4}) Dinghao Xi · 最近更新："
+                r"(?P=year)年(?:[1-9]|1[0-2])月(?:[1-9]|[12]\d|3[01])日$"
+            ),
+        }
+        forbidden_attribution = (
+            "Published with",
+            "powered by",
+            "Minimal Mistakes",
+            "Source code for this website",
+            "发布于",
+            "驱动",
+            "源代码",
+        )
+        footer_include = read_file("_includes/footer.html")
+        self.assertIsNotNone(
+            footer_include,
+            "required footer include is missing: _includes/footer.html",
+        )
+        for liquid_expression in (
+            "{{ site.time | date: '%Y' }}",
+            "{{ site.time | date: '%B %-d, %Y' }}",
+            "{{ site.time | date: '%Y年%-m月%-d日' }}",
+        ):
+            with self.subTest(layer="source", required=liquid_expression):
+                self.assertIn(liquid_expression, footer_include)
+        for obsolete_link in (
+            "pages.github.com",
+            "jekyllrb.com",
+            "mademistakes.com",
+            "github.com/DinghaoXi/DinghaoXi.github.io",
+        ):
+            with self.subTest(layer="source", obsolete=obsolete_link):
+                self.assertNotIn(obsolete_link, footer_include)
+
+        for relative_path, expected in RENDERED_PAGE_CONTRACTS.items():
+            with self.subTest(page=relative_path):
+                _, parsed = self.rendered_page(relative_path)
+                self.assertEqual(len(parsed.footer_container_texts), 1)
+                self.assertEqual(len(parsed.footer_texts), 1)
+                footer_text = parsed.footer_texts[0]
+                footer_container_text = parsed.footer_container_texts[0]
+                self.assertRegex(footer_text, patterns[expected["lang"]])
+                for marker in forbidden_attribution:
+                    self.assertNotIn(marker, footer_container_text)
 
 
 if __name__ == "__main__":

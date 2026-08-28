@@ -1,15 +1,8 @@
 {% assign page_lang = page.lang | default: 'en' %}
-<h6>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}.
+<h6>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }} &middot;
   {% if page_lang == 'zh-CN' %}
-  发布于 <a href="https://pages.github.com/" rel="nofollow">GitHub Pages</a>，
-  由 <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> 驱动，
-  基于 <a href="https://mademistakes.com/" rel="nofollow">Minimal Mistakes</a> 主题。
-  本网站的源代码可在<a href="https://github.com/DinghaoXi/DinghaoXi.github.io" rel="nofollow">此处</a>查看。
+  最近更新：{{ site.time | date: '%Y年%-m月%-d日' }}
   {% else %}
-  Published with <a href="https://pages.github.com/" rel="nofollow">GitHub Pages</a>,
-  powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a>,
-  based on the <a href="https://mademistakes.com/" rel="nofollow">Minimal Mistakes</a> theme.
-  Source code for this website can be found <a href="https://github.com/DinghaoXi/DinghaoXi.github.io" rel="nofollow">here</a>.
+  Last updated: {{ site.time | date: '%B %-d, %Y' }}
   {% endif %}
-
 </h6>
