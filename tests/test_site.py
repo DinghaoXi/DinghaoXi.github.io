@@ -764,6 +764,84 @@ class SiteContractTest(unittest.TestCase):
                 for marker in forbidden_attribution:
                     self.assertNotIn(marker, footer_container_text)
 
+    def test_about_pages_show_latest_localized_nsfc_news(self):
+        contracts = (
+            {
+                "source": "index.md",
+                "rendered": "index.html",
+                "heading": "## News and Updates",
+                "new_source": "- **August 2026**: Received a grant under the Young Scientists Fund of the National Natural Science Foundation of China (NSFC).",
+                "old_source": "- **July 2024**: Joined SUFE as an Assistant Professor.",
+                "new_rendered": "August 2026: Received a grant under the Young Scientists Fund of the National Natural Science Foundation of China (NSFC).",
+                "old_rendered": "July 2024: Joined SUFE as an Assistant Professor.",
+                "wrong_language_markers": (
+                    "## 新闻与动态",
+                    "- **2026 年 8 月：** 获批国家自然科学基金青年科学基金项目。",
+                    "- **2024 年 7 月：** 入职上海财经大学，担任助理教授。",
+                ),
+            },
+            {
+                "source": "zh/index.md",
+                "rendered": "zh/index.html",
+                "heading": "## 新闻与动态",
+                "new_source": "- **2026 年 8 月：** 获批国家自然科学基金青年科学基金项目。",
+                "old_source": "- **2024 年 7 月：** 入职上海财经大学，担任助理教授。",
+                "new_rendered": "2026 年 8 月： 获批国家自然科学基金青年科学基金项目。",
+                "old_rendered": "2024 年 7 月： 入职上海财经大学，担任助理教授。",
+                "wrong_language_markers": (
+                    "## News and Updates",
+                    "- **August 2026**: Received a grant under the Young Scientists Fund of the National Natural Science Foundation of China (NSFC).",
+                    "- **July 2024**: Joined SUFE as an Assistant Professor.",
+                ),
+            },
+        )
+
+        for contract in contracts:
+            with self.subTest(page=contract["source"], layer="source"):
+                source = read_file(contract["source"])
+                self.assertIsNotNone(
+                    source,
+                    "required page file is missing: %s" % contract["source"],
+                )
+                self.assertEqual(source.count(contract["heading"]), 1)
+                self.assertEqual(source.count(contract["new_source"]), 1)
+                self.assertEqual(source.count(contract["old_source"]), 1)
+                source_order = "%s\n%s\n%s" % (
+                    contract["heading"],
+                    contract["new_source"],
+                    contract["old_source"],
+                )
+                self.assertIn(source_order, source)
+                for marker in contract["wrong_language_markers"]:
+                    self.assertNotIn(marker, source)
+
+            with self.subTest(page=contract["rendered"], layer="rendered"):
+                _, parsed = self.rendered_page(contract["rendered"])
+                rendered_order = (
+                    ("h2", contract["heading"].removeprefix("## ")),
+                    ("li", contract["new_rendered"]),
+                    ("li", contract["old_rendered"]),
+                )
+                blocks = parsed.article_blocks
+                self.assertTrue(
+                    any(
+                        blocks[index : index + len(rendered_order)] == list(rendered_order)
+                        for index in range(len(blocks) - len(rendered_order) + 1)
+                    ),
+                    "rendered news blocks are not contiguous and ordered: %s"
+                    % contract["rendered"],
+                )
+                visible_text = " ".join("".join(parsed.visible_text_parts).split())
+                self.assertEqual(visible_text.count(contract["new_rendered"]), 1)
+                self.assertEqual(visible_text.count(contract["old_rendered"]), 1)
+                for marker in contract["wrong_language_markers"]:
+                    rendered_marker = (
+                        marker[3:]
+                        if marker.startswith("## ")
+                        else marker.replace("- **", "").replace("**", "")
+                    )
+                    self.assertNotIn(rendered_marker, visible_text)
+
 
     def test_about_pages_include_localized_personal_interests(self):
         contracts = (

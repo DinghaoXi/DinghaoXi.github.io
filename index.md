@@ -49,6 +49,7 @@ My current research focuses on practical problems that artificial intelligence f
 ---
 
 ## News and Updates
+- **August 2026**: Received a grant under the Young Scientists Fund of the National Natural Science Foundation of China (NSFC).
 - **July 2024**: Joined SUFE as an Assistant Professor.
 - **Oct 2023**: Our paper was accepted by IJEC.
 - **Aug 2023**: Our papers were accepted at ICIS 2023 and CIST 2023.
