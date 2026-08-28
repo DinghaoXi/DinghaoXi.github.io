@@ -10,6 +10,10 @@ import xml.etree.ElementTree as ET
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_ROOT = os.path.join(ROOT, "_site")
 SITE_URL = "https://dinghaoxi.github.io"
+VOID_TAGS = {
+    "area", "base", "br", "col", "embed", "hr", "img", "input",
+    "link", "meta", "param", "source", "track", "wbr",
+}
 
 
 FORBIDDEN_IDENTIFIERS = (
@@ -173,9 +177,37 @@ class RenderedPageParser(HTMLParser):
         self._footer_container_text = []
         self._footer_heading_depth = 0
         self._footer_heading_text = []
+        self.visible_text_parts = []
+        self.article_blocks = []
+        self._article_depth = 0
+        self._hidden_depth = 0
+        self._element_stack = []
+        self._article_block = None
+        self._article_block_tag = None
+        self._article_block_depth = 0
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
+
+        if tag == "article":
+            self._article_depth += 1
+        hidden = (
+            self._hidden_depth > 0
+            or tag in {"head", "script", "style", "template", "noscript"}
+            or "hidden" in attributes
+            or attributes.get("aria-hidden") == "true"
+            or "display:none" in (attributes.get("style") or "").replace(" ", "").lower()
+        )
+        if tag not in VOID_TAGS:
+            self._element_stack.append((tag, hidden))
+        if hidden and tag not in VOID_TAGS:
+            self._hidden_depth += 1
+        if self._article_depth and not self._hidden_depth and tag in {"h2", "li", "p"} and self._article_block is None:
+            self._article_block = []
+            self._article_block_tag = tag
+            self._article_block_depth = 1
+        elif self._article_block is not None and tag not in VOID_TAGS:
+            self._article_block_depth += 1
 
         if tag == "html":
             self.html_langs.append(attributes.get("lang"))
@@ -228,6 +260,10 @@ class RenderedPageParser(HTMLParser):
             self._footer_heading_depth += 1
 
     def handle_data(self, data):
+        if self._article_depth and not self._hidden_depth:
+            self.visible_text_parts.append(data)
+        if self._article_block is not None and self._article_depth and not self._hidden_depth:
+            self._article_block.append(data)
         if self._navigation_anchor is not None:
             self._navigation_anchor["text"].append(data)
         if self._language_switch_anchor is not None:
@@ -242,6 +278,25 @@ class RenderedPageParser(HTMLParser):
             self._footer_heading_text.append(data)
 
     def handle_endtag(self, tag):
+        if self._article_block is not None and tag not in VOID_TAGS:
+            self._article_block_depth -= 1
+            if self._article_block_depth == 0:
+                self.article_blocks.append(
+                    (self._article_block_tag, " ".join("".join(self._article_block).split()))
+                )
+                self._article_block = None
+                self._article_block_tag = None
+        if tag not in VOID_TAGS:
+            for index in range(len(self._element_stack) - 1, -1, -1):
+                element_tag, hidden = self._element_stack[index]
+                if element_tag == tag:
+                    del self._element_stack[index:]
+                    if hidden:
+                        self._hidden_depth -= 1
+                    break
+        if tag == "article" and self._article_depth:
+            self._article_depth -= 1
+
         if tag == "a" and self._navigation_anchor is not None:
             self.navigation_links.append(
                 {
@@ -709,6 +764,143 @@ class SiteContractTest(unittest.TestCase):
                 for marker in forbidden_attribution:
                     self.assertNotIn(marker, footer_container_text)
 
+
+    def test_about_pages_include_localized_personal_interests(self):
+        contracts = (
+            {
+                "source": "index.md",
+                "rendered": "index.html",
+                "anchor": "## Professional Service",
+                "heading_line": "## Beyond Research",
+                "source_lines": (
+                    "- **Badminton.** Always my undisputed No. 1.",
+                    "- **Games.** CS:GO, Delta Force, Overwatch, Honor of Kings, and PUBG Mobile.",
+                    "- **Reading.** Agatha Christie, science fiction, and horror.",
+                    "Open to academic collaborations and gaming collaborations alike—happy to advance both papers and ranks.",
+                ),
+                "expected_suffix": """<br>
+
+---
+
+## Beyond Research
+
+- **Badminton.** Always my undisputed No. 1.
+- **Games.** CS:GO, Delta Force, Overwatch, Honor of Kings, and PUBG Mobile.
+- **Reading.** Agatha Christie, science fiction, and horror.
+
+Open to academic collaborations and gaming collaborations alike—happy to advance both papers and ranks.""",
+                "expected_blocks": (
+                    ("h2", "Beyond Research"),
+                    ("li", "Badminton. Always my undisputed No. 1."),
+                    ("li", "Games. CS:GO, Delta Force, Overwatch, Honor of Kings, and PUBG Mobile."),
+                    ("li", "Reading. Agatha Christie, science fiction, and horror."),
+                    ("p", "Open to academic collaborations and gaming collaborations alike—happy to advance both papers and ranks."),
+                ),
+                "source_counterpart_markers": (
+                    "学术之外",
+                    "- **羽毛球。** 毫无争议的 Top 1。",
+                    "- **游戏。** CS:GO、三角洲行动、守望先锋、王者荣耀和刺激战场。",
+                    "- **阅读。** 阿加莎·克里斯蒂的作品，以及科幻、恐怖类读物。",
+                    "欢迎学术合作，也欢迎游戏合作——既可以一起推进论文，也可以一起推进段位。",
+                ),
+                "visible_markers": (
+                    "Beyond Research",
+                    "Badminton. Always my undisputed No. 1.",
+                    "Games. CS:GO, Delta Force, Overwatch, Honor of Kings, and PUBG Mobile.",
+                    "Reading. Agatha Christie, science fiction, and horror.",
+                    "Open to academic collaborations and gaming collaborations alike—happy to advance both papers and ranks.",
+                ),
+                "forbidden_heading": "学术之外",
+                "forbidden_closing": "欢迎学术合作，也欢迎游戏合作",
+            },
+            {
+                "source": "zh/index.md",
+                "rendered": "zh/index.html",
+                "anchor": "## 学术服务",
+                "heading_line": "## 学术之外",
+                "source_lines": (
+                    "- **羽毛球。** 毫无争议的 Top 1。",
+                    "- **游戏。** CS:GO、三角洲行动、守望先锋、王者荣耀和刺激战场。",
+                    "- **阅读。** 阿加莎·克里斯蒂的作品，以及科幻、恐怖类读物。",
+                    "欢迎学术合作，也欢迎游戏合作——既可以一起推进论文，也可以一起推进段位。",
+                ),
+                "expected_suffix": """<br>
+
+---
+
+## 学术之外
+
+- **羽毛球。** 毫无争议的 Top 1。
+- **游戏。** CS:GO、三角洲行动、守望先锋、王者荣耀和刺激战场。
+- **阅读。** 阿加莎·克里斯蒂的作品，以及科幻、恐怖类读物。
+
+欢迎学术合作，也欢迎游戏合作——既可以一起推进论文，也可以一起推进段位。""",
+                "expected_blocks": (
+                    ("h2", "学术之外"),
+                    ("li", "羽毛球。 毫无争议的 Top 1。"),
+                    ("li", "游戏。 CS:GO、三角洲行动、守望先锋、王者荣耀和刺激战场。"),
+                    ("li", "阅读。 阿加莎·克里斯蒂的作品，以及科幻、恐怖类读物。"),
+                    ("p", "欢迎学术合作，也欢迎游戏合作——既可以一起推进论文，也可以一起推进段位。"),
+                ),
+                "source_counterpart_markers": (
+                    "Beyond Research",
+                    "- **Badminton.** Always my undisputed No. 1.",
+                    "- **Games.** CS:GO, Delta Force, Overwatch, Honor of Kings, and PUBG Mobile.",
+                    "- **Reading.** Agatha Christie, science fiction, and horror.",
+                    "Open to academic collaborations and gaming collaborations alike—happy to advance both papers and ranks.",
+                ),
+                "visible_markers": (
+                    "学术之外",
+                    "羽毛球。 毫无争议的 Top 1。",
+                    "游戏。 CS:GO、三角洲行动、守望先锋、王者荣耀和刺激战场。",
+                    "阅读。 阿加莎·克里斯蒂的作品，以及科幻、恐怖类读物。",
+                    "欢迎学术合作，也欢迎游戏合作——既可以一起推进论文，也可以一起推进段位。",
+                ),
+                "forbidden_heading": "Beyond Research",
+                "forbidden_closing": "Open to academic collaborations and gaming collaborations alike",
+            },
+        )
+
+        for contract in contracts:
+            with self.subTest(page=contract["source"], layer="source"):
+                source = read_file(contract["source"])
+                self.assertIsNotNone(
+                    source,
+                    "required page file is missing: %s" % contract["source"],
+                )
+                self.assertEqual(source.count(contract["heading_line"]), 1)
+                self.assertGreater(
+                    source.index(contract["heading_line"]),
+                    source.index(contract["anchor"]),
+                )
+                for line in contract["source_lines"]:
+                    with self.subTest(page=contract["source"], source_line=line):
+                        self.assertEqual(source.count(line), 1)
+                self.assertTrue(source.rstrip().endswith(contract["expected_suffix"].rstrip()))
+                self.assertNotIn(contract["forbidden_heading"], source)
+                self.assertNotIn(contract["forbidden_closing"], source)
+                for marker in contract["source_counterpart_markers"]:
+                    self.assertNotIn(marker, source)
+
+            with self.subTest(page=contract["rendered"], layer="rendered"):
+                _, parsed = self.rendered_page(contract["rendered"])
+                visible_text = " ".join("".join(parsed.visible_text_parts).split())
+                for marker in contract["visible_markers"]:
+                    with self.subTest(page=contract["rendered"], marker=marker):
+                        self.assertEqual(visible_text.count(marker), 1)
+                self.assertEqual(parsed.article_blocks[-5:], list(contract["expected_blocks"]))
+                self.assertNotIn(contract["forbidden_heading"], visible_text)
+                self.assertNotIn(contract["forbidden_closing"], visible_text)
+                article_text = " ".join(text for _, text in parsed.article_blocks)
+                rendered_counterpart_markers = tuple(
+                    marker.replace("- **", "").replace("**", "")
+                    for marker in contract["source_counterpart_markers"][1:4]
+                ) + (
+                    contract["source_counterpart_markers"][4],
+                    contract["source_counterpart_markers"][0],
+                )
+                for marker in rendered_counterpart_markers:
+                    self.assertNotIn(marker, article_text)
 
 if __name__ == "__main__":
     unittest.main()

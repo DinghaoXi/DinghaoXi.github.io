@@ -70,3 +70,15 @@ My current research focuses on practical problems that artificial intelligence f
   - Humanities and Social Sciences Communications
   - Neurocomputing
   - Scientific Reports
+
+<br>
+
+---
+
+## Beyond Research
+
+- **Badminton.** Always my undisputed No. 1.
+- **Games.** CS:GO, Delta Force, Overwatch, Honor of Kings, and PUBG Mobile.
+- **Reading.** Agatha Christie, science fiction, and horror.
+
+Open to academic collaborations and gaming collaborations alike—happy to advance both papers and ranks.

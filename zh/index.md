@@ -68,3 +68,15 @@ description: 奚鼎昊的学术主页与个人简介。
   - Humanities and Social Sciences Communications
   - Neurocomputing
   - Scientific Reports
+
+<br>
+
+---
+
+## 学术之外
+
+- **羽毛球。** 毫无争议的 Top 1。
+- **游戏。** CS:GO、三角洲行动、守望先锋、王者荣耀和刺激战场。
+- **阅读。** 阿加莎·克里斯蒂的作品，以及科幻、恐怖类读物。
+
+欢迎学术合作，也欢迎游戏合作——既可以一起推进论文，也可以一起推进段位。
